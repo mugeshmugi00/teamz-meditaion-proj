@@ -1,2 +1,17 @@
-<p>session-start works!</p>
-<h2>AMUDU</h2>
+<div class="container">
+  <header>
+    <button class="back-button" (click)="goBack()">Back</button>
+    <h2>Meditation Session</h2>
+  </header>
+  <div class="content">
+    <div class="timer-container">
+      <h3>Time Remaining: {{ displayTime }}</h3>
+      <div class="button-group">
+        <button *ngIf="!isRunning && !isPaused" (click)="startTimer()" class="start-button">Start</button>
+        <button *ngIf="isRunning" (click)="pauseTimer()" class="pause-button">Pause</button>
+        <button *ngIf="isPaused" (click)="resumeTimer()" class="start-button">Resume</button>
+        <button *ngIf="isRunning || isPaused" (click)="stopTimer()" class="stop-button">Stop</button>
+      </div>
+    </div>
+  </div>
+</div>

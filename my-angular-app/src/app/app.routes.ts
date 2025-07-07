@@ -6,7 +6,6 @@ import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 import { UserHomeComponent } from './pages/user-home/user-home.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { SessionStartComponent } from './pages/session-start/session-start.component';
-import { RankComponent } from './pages/rank/rank.component';
 import { PoemComponent } from './pages/poem/poem.component';
 
 
@@ -18,6 +17,5 @@ export const routes: Routes = [
   { path: 'user-home', component: UserHomeComponent },
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'session-start', component: SessionStartComponent },
-  { path: 'app-rank', component: RankComponent },
   { path: 'app-poem', component: PoemComponent },
 ];

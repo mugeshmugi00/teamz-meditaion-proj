@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 20px;
+  color: white;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  background: #4A7C7C;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://png.pngtree.com/png-clipart/20230927/original/pngtree-mental-health-meditation-illustration-png-image_13147769.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+
+header h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  margin-left: 50px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(240, 228, 212, 0.2);
+  color: #2E4A62;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.back-button:hover {
+  background-color: rgba(240, 228, 212, 0.4);
+  transform: scale(1.05);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+}
+
+.timer-container {
+  background: rgba(240, 228, 212, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #2E4A62;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(240, 228, 212, 0.3);
+}
+
+.timer-container h3 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #2E4A62;
+  font-weight: 700;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.start-button, .pause-button, .stop-button {
+  padding: 12px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button {
+  background-color: #4A7C7C;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #3A6C6C;
+  transform: scale(1.05);
+}
+
+.pause-button {
+  background-color: #D4A017;
+  color: white;
+}
+
+.pause-button:hover {
+  background-color: #B38E14;
+  transform: scale(1.05);
+}
+
+.stop-button {
+  background-color: #D43F3F;
+  color: white;
+}
+
+.stop-button:hover {
+  background-color: #B32D2D;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h2 {
+    font-size: 1.8em;
+  }
+
+  .back-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .timer-container {
+    width: 80%;
+    padding: 20px;
+    top: 55%;
+  }
+
+  .timer-container h3 {
+    font-size: 1.5em;
+  }
+
+  .start-button, .pause-button, .stop-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
