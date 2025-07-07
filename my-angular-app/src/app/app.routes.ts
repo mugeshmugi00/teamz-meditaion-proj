@@ -18,4 +18,5 @@ export const routes: Routes = [
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'session-start', component: SessionStartComponent },
   { path: 'app-poem', component: PoemComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
