@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -7,6 +9,34 @@ import { CommonModule } from '@angular/common';
   templateUrl: './session-start.component.html',
   styleUrl: './session-start.component.css',
   imports: [CommonModule]
+=======
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
+=======
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
+
+@Component({
+  selector: 'app-session-start',
+  standalone: true,
+  imports: [CommonModule, RouterModule, FooterComponent],
+  templateUrl: './session-start.component.html',
+  styleUrls: ['./session-start.component.css']
+})
+export class SessionStartComponent {
+>>>>>>> Stashed changes
+
+@Component({
+  selector: 'app-session-start',
+  standalone: true,
+  imports: [CommonModule, RouterModule, FooterComponent],
+  templateUrl: './session-start.component.html',
+  styleUrls: ['./session-start.component.css']
+>>>>>>> Stashed changes
 })
 export class SessionStartComponent implements OnInit, OnDestroy {
   timeInSeconds: number = 0;

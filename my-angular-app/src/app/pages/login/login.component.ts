@@ -1,13 +1,31 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+=======
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
+>>>>>>> Stashed changes
+=======
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-login',
   standalone: true,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
+=======
+  imports: [CommonModule, RouterModule, FooterComponent],
+>>>>>>> Stashed changes
+=======
+  imports: [CommonModule, RouterModule, FooterComponent],
+>>>>>>> Stashed changes
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

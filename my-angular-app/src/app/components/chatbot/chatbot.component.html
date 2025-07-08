@@ -1,0 +1,37 @@
+<div class="chatbot-container">
+  <button *ngIf="!isOpen" class="chatbot-fab" (click)="openChat()" aria-label="Open chatbot">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#667eea"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 15h8M9 9h.01M15 9h.01"/>
+    </svg>
+  </button>
+  <div *ngIf="isOpen" class="chatbot-window slide-in-up">
+    <div class="chatbot-header">
+      <div class="flex items-center space-x-2">
+        <span class="chatbot-avatar">🧘‍♂️</span>
+        <span class="font-bold">Meditation Assistant</span>
+      </div>
+      <button class="chatbot-close" (click)="closeChat()" aria-label="Close chatbot">&times;</button>
+    </div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div *ngFor="let msg of messages" [ngClass]="{'chatbot-msg-bot': msg.sender === 'bot', 'chatbot-msg-user': msg.sender === 'user'}" class="chatbot-msg">
+        <span *ngIf="msg.sender === 'bot'" class="chatbot-avatar">🧘‍♂️</span>
+        <span>{{msg.text}}</span>
+      </div>
+    </div>
+    <form class="chatbot-input-row" (ngSubmit)="sendMessage()">
+      <input type="text" [(ngModel)]="userInput" name="userInput" class="chatbot-input" placeholder="Type your question..." autocomplete="off" required />
+      <button type="submit" class="chatbot-send" aria-label="Send">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </button>
+    </form>
+    <div class="chatbot-recommendations mt-2 flex flex-wrap gap-2" *ngIf="recommendedQuestions.length > 0">
+      <span class="text-xs text-gray-400 mr-2">Try asking:</span>
+      <button *ngFor="let rec of recommendedQuestions" type="button" (click)="sendRecommended(rec)" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs hover:bg-blue-100 transition">
+        {{ rec }}
+      </button>
+    </div>
+  </div>
+</div> 

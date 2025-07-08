@@ -1,0 +1,85 @@
+%PDF-1.4
+% Sample Meditation Certificate PDF
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 600 400] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 350 >>
+stream
+q
+0.75 w
+0 0 1 RG
+8 8 584 384 re S
+BT
+/F1 32 Tf
+0.35 0.45 0.88 rg
+180 350 Td
+(Certificate of Completion) Tj
+ET
+BT
+/F1 18 Tf
+0 0 0 rg
+210 320 Td
+(This certifies that) Tj
+ET
+BT
+/F1 28 Tf
+0.63 0.35 0.90 rg
+220 290 Td
+([Name]) Tj
+ET
+BT
+/F1 18 Tf
+0 0 0 rg
+170 260 Td
+(has successfully completed the) Tj
+ET
+BT
+/F1 22 Tf
+0.35 0.45 0.88 rg
+180 230 Td
+([Course Name]) Tj
+ET
+BT
+/F1 18 Tf
+0 0 0 rg
+210 210 Td
+(meditation program) Tj
+ET
+BT
+/F1 16 Tf
+0.5 0.5 0.5 rg
+240 180 Td
+(Date: [Completion Date]) Tj
+ET
+BT
+/F1 20 Tf
+0.35 0.45 0.88 rg
+200 60 Td
+(Mindful Meditations) Tj
+ET
+Q
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000111 00000 n 
+0000000272 00000 n 
+0000000732 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+812
+%%EOF 

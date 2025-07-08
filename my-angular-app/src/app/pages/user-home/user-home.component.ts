@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
@@ -7,11 +8,28 @@ interface User {
   email: string;
   createdAt: string;
 }
+=======
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-user-home',
   standalone: true,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   imports: [CommonModule], // Remove RouterLink if not used
+=======
+  imports: [CommonModule, RouterModule, FooterComponent],
+>>>>>>> Stashed changes
+=======
+  imports: [CommonModule, RouterModule, FooterComponent],
+>>>>>>> Stashed changes
   templateUrl: './user-home.component.html',
   styleUrls: ['./user-home.component.css']
 })
