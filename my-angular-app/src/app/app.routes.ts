@@ -7,7 +7,13 @@ import { UserHomeComponent } from './pages/user-home/user-home.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { SessionStartComponent } from './pages/session-start/session-start.component';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { PoemComponent } from './pages/poem/poem.component';
+=======
+import { SupportComponent } from './pages/support/support.component';
+import { DocumentationComponent } from './pages/documentation/documentation.component';
+import { ExploreCoursesComponent } from './pages/explore-courses/explore-courses.component';
+>>>>>>> Stashed changes
 =======
 import { SupportComponent } from './pages/support/support.component';
 import { DocumentationComponent } from './pages/documentation/documentation.component';
@@ -27,9 +33,12 @@ export const routes: Routes = [
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'session-start', component: SessionStartComponent },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   { path: 'app-poem', component: PoemComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 =======
+=======
+>>>>>>> Stashed changes
   { path: 'explore-courses', component: ExploreCoursesComponent },
   {
     path: 'claim-discount',

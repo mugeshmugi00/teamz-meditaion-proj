@@ -10,15 +10,24 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 @Component({
   selector: 'app-register',
   standalone: true,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   imports: [CommonModule, ReactiveFormsModule, HttpClientModule, RouterModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
+=======
+  imports: [CommonModule, RouterModule, FooterComponent],
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+>>>>>>> Stashed changes
 =======
   imports: [CommonModule, RouterModule, FooterComponent],
   templateUrl: './register.component.html',
