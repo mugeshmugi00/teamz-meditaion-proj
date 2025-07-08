@@ -1,0 +1,132 @@
+/* Footer Component Styles */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover effects for links */
+footer a {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+footer a:hover {
+  transform: translateX(2px);
+}
+
+/* Social media icons hover effect */
+footer .flex.space-x-4 a {
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+footer .flex.space-x-4 a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Contact info hover effects */
+footer .flex.items-start.space-x-3:hover,
+footer .flex.items-center.space-x-3:hover {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+/* List items hover effect */
+footer ul li a {
+  position: relative;
+  padding-left: 0;
+  transition: all 0.3s ease;
+}
+
+footer ul li a::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+}
+
+footer ul li a:hover::before {
+  width: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  footer .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  footer .grid {
+    gap: 2rem;
+  }
+  
+  footer .flex.flex-col.md\\:flex-row {
+    text-align: center;
+  }
+}
+
+/* Animation for footer appearance */
+footer {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for footer content */
+footer ::-webkit-scrollbar {
+  width: 6px;
+}
+
+footer ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+footer ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+footer ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Focus styles for accessibility */
+footer a:focus,
+footer button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading state for dynamic content */
+footer .loading {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+} 

@@ -1,16 +1,29 @@
+<<<<<<< Updated upstream
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
+=======
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-register',
   standalone: true,
+<<<<<<< Updated upstream
   imports: [CommonModule, ReactiveFormsModule, HttpClientModule, RouterModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
+=======
+  imports: [CommonModule, RouterModule, FooterComponent],
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+>>>>>>> Stashed changes
 })
 export class RegisterComponent implements OnInit {
   registrationForm!: FormGroup;

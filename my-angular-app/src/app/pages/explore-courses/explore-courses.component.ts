@@ -4,12 +4,10 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
-  selector: 'app-admin-home',
+  selector: 'app-explore-courses',
   standalone: true,
   imports: [CommonModule, RouterModule, FooterComponent],
-  templateUrl: './admin-home.component.html',
-  styleUrls: ['./admin-home.component.css']
+  templateUrl: './explore-courses.component.html',
+  styleUrls: ['./explore-courses.component.css']
 })
-export class AdminHomeComponent {
-
-}
+export class ExploreCoursesComponent {} 

@@ -1,2 +1,253 @@
+<<<<<<< Updated upstream
 <p>intro works!</p>
 <a routerLink="/register">Go to Register</a>
+=======
+<nav class="fixed w-full bg-white shadow-md z-50">
+  <div class="container mx-auto px-6 py-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <a href="#" class="text-2xl font-bold gradient-text slide-in-left">Mindful Meditations</a>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a routerLink="/intro" class="nav-link text-gray-700 hover:text-gray-900 slide-in-right">Home</a>
+        <a routerLink="/support" class="nav-link text-gray-700 hover:text-gray-900 slide-in-right">Support</a>
+        <a routerLink="/documentation" class="nav-link text-gray-700 hover:text-gray-900 slide-in-right">Documentation</a>
+        <a routerLink="/login" class="nav-link text-gray-700 hover:text-gray-900 slide-in-right">Login</a>
+        <a routerLink="/register" class="px-4 py-2 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 transition duration-300 slide-in-right">Register</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="menu-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="md:hidden hidden mt-2" id="mobile-menu">
+      <a routerLink="/intro" class="block py-2 text-gray-700">Home</a>
+      <a routerLink="/support" class="block py-2 text-gray-700">Support</a>
+      <a routerLink="/documentation" class="block py-2 text-gray-700">Documentation</a>
+      <a routerLink="/login" class="block py-2 text-gray-700">Login</a>
+      <a routerLink="/register" class="block py-2 text-gray-700">Register</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero-section flex items-center justify-center text-white pt-16 relative overflow-hidden">
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 font-serif">Find Your Inner Peace Through Meditation</h1>
+      <p class="text-xl mb-10">Join thousands who have transformed their lives with our scientifically-backed meditation programs</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button routerLink="/session-start" class="px-8 py-3 bg-white text-gray-800 rounded-md font-medium hover:bg-gray-100 transition duration-300">
+          Start Free Trial
+        </button>
+        <button routerLink="/explore-courses" class="px-8 py-3 border-2 border-white text-white rounded-md font-medium hover:bg-white hover:text-gray-800 transition duration-300">
+          Explore Courses
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif slide-in-left">Our Successfully Completed Online Meditation Courses</h2>
+      <p class="max-w-2xl mx-auto text-gray-600 slide-in-right">Thousands have found peace and clarity through our structured meditation programs</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="meditation-card bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center slide-in-up">
+        <div class="w-20 h-20 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+          <img src="https://placehold.co/60x60" alt="Icon of a lotus flower representing beginner meditation course" class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-gray-800">Foundations of Mindfulness</h3>
+        <p class="text-gray-600 mb-4">30-day beginner program introducing core meditation techniques</p>
+        <div class="mb-4">
+          <span class="text-sm font-medium text-gray-500">Completion Rate: 92%</span>
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+            <div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div>
+          </div>
+        </div>
+        <span class="inline-block px-3 py-1 text-sm font-semibold text-white bg-green-500 rounded-full">Most Popular</span>
+      </div>
+      <div class="meditation-card bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center slide-in-up">
+        <div class="w-20 h-20 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+          <img src="https://placehold.co/60x60" alt="Icon of a mountain representing advanced meditation course" class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-gray-800">Deep Meditation Mastery</h3>
+        <p class="text-gray-600 mb-4">Advanced 60-day program for deepening your meditation practice</p>
+        <div class="mb-4">
+          <span class="text-sm font-medium text-gray-500">Completion Rate: 83%</span>
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+            <div class="bg-blue-500 h-2 rounded-full" style="width: 83%"></div>
+          </div>
+        </div>
+        <span class="inline-block px-3 py-1 text-sm font-semibold text-white bg-blue-500 rounded-full">Advanced</span>
+      </div>
+      <div class="meditation-card bg-white p-8 rounded-lg shadow-md border border-gray-100 text-center slide-in-up">
+        <div class="w-20 h-20 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+          <img src="https://placehold.co/60x60" alt="Icon of a heart representing stress relief course" class="w-12 h-12" />
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-gray-800">Stress Relief in 21 Days</h3>
+        <p class="text-gray-600 mb-4">Evidence-based program to reduce anxiety and improve sleep</p>
+        <div class="mb-4">
+          <span class="text-sm font-medium text-gray-500">Completion Rate: 89%</span>
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+            <div class="bg-purple-500 h-2 rounded-full" style="width: 89%"></div>
+          </div>
+        </div>
+        <span class="inline-block px-3 py-1 text-sm font-semibold text-white bg-purple-500 rounded-full">Best Rated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 slide-in-left">
+        <iframe src="/sample-certificate.pdf" width="600" height="400" class="rounded-lg shadow-xl transform rotate-3 hover:rotate-0 transition duration-500 border border-gray-200" style="max-width:100%;" title="Sample Meditation Certificate PDF"></iframe>
+        <div class="text-center text-sm text-gray-500 mt-2">If the PDF does not display, <a href="/sample-certificate.pdf" target="_blank" class="underline">click here to download</a>.</div>
+      </div>
+      <div class="md:w-1/2 slide-in-right">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">Earn Your Meditation Certification</h2>
+        <p class="text-gray-600 mb-6">Upon completion of any of our core programs, you'll receive a beautiful certificate that recognizes your achievement.</p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-center slide-in-right">
+            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white mr-3">✓</span>
+            <span>Digitally shareable certificate</span>
+          </li>
+          <li class="flex items-center slide-in-right">
+            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white mr-3">✓</span>
+            <span>Optional printed certificate with premium membership</span>
+          </li>
+          <li class="flex items-center slide-in-right">
+            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white mr-3">✓</span>
+            <span>Verifiable credentials for professional development</span>
+          </li>
+        </ul>
+        <button (click)="showCertificateModal = true" class="px-8 py-3 bg-gray-800 text-white rounded-md font-medium hover:bg-gray-700 transition duration-300 slide-in-up">View Sample Certificate</button>
+        <div *ngIf="showCertificateModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div class="bg-white rounded-lg shadow-2xl p-6 max-w-2xl w-full relative animate-fade-in flex flex-col items-center">
+            <button (click)="showCertificateModal = false" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <iframe src="/sample-certificate.pdf" width="600" height="400" class="rounded-md border border-gray-200" style="max-width:100%;" title="Sample Meditation Certificate PDF"></iframe>
+            <div class="text-center text-sm text-gray-500 mt-2">If the PDF does not display, <a href="/sample-certificate.pdf" target="_blank" class="underline">click here to download</a>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gradient-to-r from-green-500 to-teal-600 text-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif slide-in-left">Special Offer for First-Time Members</h2>
+      <p class="text-xl mb-8 slide-in-right">Get 50% off your first month of premium membership when you sign up today</p>
+      <div class="bg-white text-gray-800 rounded-lg shadow-xl p-8 max-w-2xl mx-auto mb-10 slide-in-up flex items-center gap-6">
+        <div class="flex-1">
+          <div class="text-5xl font-bold mb-2 gradient-text">50% OFF</div>
+          <div class="text-xl mb-4">your first month</div>
+          <p class="text-gray-600 mb-6">Premium membership includes access to all courses, personalized coaching, and downloadable resources.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button [routerLink]="'/claim-discount'" class="px-8 py-3 bg-gray-800 text-white rounded-md font-medium hover:bg-gray-700 transition duration-300">Claim Your Discount</button>
+            <button [routerLink]="'/learn-more'" class="px-8 py-3 border-2 border-gray-800 text-gray-800 rounded-md font-medium hover:bg-gray-800 hover:text-white transition duration-300">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm slide-in-up">Offer expires in <span class="font-bold">3 days, 12 hours</span>. Limited spots available.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif slide-in-left">Our Global Meditation Community</h2>
+      <p class="max-w-2xl mx-auto text-gray-600 slide-in-right">Join thousands who have improved their mental wellbeing through our programs</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6 mb-16">
+      <div class="stat-item bg-gray-50 p-6 rounded-lg slide-in-up">
+        <div class="text-4xl font-bold mb-2 gradient-text">25K+</div>
+        <div class="text-gray-600">Active Members</div>
+      </div>
+      <div class="stat-item bg-gray-50 p-6 rounded-lg slide-in-up">
+        <div class="text-4xl font-bold mb-2 gradient-text">1.2M</div>
+        <div class="text-gray-600">Meditation Minutes</div>
+      </div>
+      <div class="stat-item bg-gray-50 p-6 rounded-lg slide-in-up">
+        <div class="text-4xl font-bold mb-2 gradient-text">96%</div>
+        <div class="text-gray-600">Satisfaction Rate</div>
+      </div>
+      <div class="stat-item bg-gray-50 p-6 rounded-lg slide-in-up">
+        <div class="text-4xl font-bold mb-2 gradient-text">42</div>
+        <div class="text-gray-600">Countries</div>
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-8 slide-in-up">
+      <h3 class="text-2xl font-bold mb-6">Meditation Benefits Reported by Our Members</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="mb-4 slide-in-left">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700">Reduced Stress</span>
+              <span class="text-sm font-medium text-gray-700">89%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-green-500 h-2 rounded-full" style="width: 89%"></div>
+            </div>
+          </div>
+          <div class="mb-4 slide-in-left">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700">Improved Focus</span>
+              <span class="text-sm font-medium text-gray-700">82%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 82%"></div>
+            </div>
+          </div>
+          <div class="mb-4 slide-in-left">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700">Better Sleep</span>
+              <span class="text-sm font-medium text-gray-700">76%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-purple-500 h-2 rounded-full" style="width: 76%"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mb-4 slide-in-right">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700">Emotional Balance</span>
+              <span class="text-sm font-medium text-gray-700">85%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-yellow-500 h-2 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="mb-4 slide-in-right">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700">Lower Anxiety</span>
+              <span class="text-sm font-medium text-gray-700">81%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-red-500 h-2 rounded-full" style="width: 81%"></div>
+            </div>
+          </div>
+          <div class="mb-4 slide-in-right">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700">Increased Happiness</span>
+              <span class="text-sm font-medium text-gray-700">78%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-pink-500 h-2 rounded-full" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+>>>>>>> Stashed changes
