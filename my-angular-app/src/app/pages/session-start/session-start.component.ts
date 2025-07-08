@@ -1,23 +1,6 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
-@Component({
-  selector: 'app-session-start',
-  templateUrl: './session-start.component.html',
-  styleUrl: './session-start.component.css',
-  imports: [CommonModule]
-=======
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FooterComponent } from '../../components/footer/footer.component';
-=======
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
@@ -26,17 +9,6 @@ import { FooterComponent } from '../../components/footer/footer.component';
   imports: [CommonModule, RouterModule, FooterComponent],
   templateUrl: './session-start.component.html',
   styleUrls: ['./session-start.component.css']
-})
-export class SessionStartComponent {
->>>>>>> Stashed changes
-
-@Component({
-  selector: 'app-session-start',
-  standalone: true,
-  imports: [CommonModule, RouterModule, FooterComponent],
-  templateUrl: './session-start.component.html',
-  styleUrls: ['./session-start.component.css']
->>>>>>> Stashed changes
 })
 export class SessionStartComponent implements OnInit, OnDestroy {
   timeInSeconds: number = 0;
@@ -47,7 +19,7 @@ export class SessionStartComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const minutes = parseInt(params['time'] || '5', 10);
       this.timeInSeconds = minutes * 60;
@@ -55,7 +27,7 @@ export class SessionStartComponent implements OnInit, OnDestroy {
     });
   }
 
-  startTimer() {
+  startTimer(): void {
     if (!this.isRunning && !this.isPaused) {
       this.isRunning = true;
       this.timer = setInterval(() => {
@@ -70,7 +42,7 @@ export class SessionStartComponent implements OnInit, OnDestroy {
     }
   }
 
-  pauseTimer() {
+  pauseTimer(): void {
     if (this.isRunning) {
       clearInterval(this.timer);
       this.isRunning = false;
@@ -78,7 +50,7 @@ export class SessionStartComponent implements OnInit, OnDestroy {
     }
   }
 
-  resumeTimer() {
+  resumeTimer(): void {
     if (this.isPaused) {
       this.isRunning = true;
       this.isPaused = false;
@@ -94,24 +66,24 @@ export class SessionStartComponent implements OnInit, OnDestroy {
     }
   }
 
-  stopTimer() {
+  stopTimer(): void {
     clearInterval(this.timer);
     this.isRunning = false;
     this.isPaused = false;
     this.router.navigate(['/user-home']);
   }
 
-  goBack() {
+  goBack(): void {
     this.router.navigate(['/user-home']);
   }
 
-  private updateDisplayTime() {
+  private updateDisplayTime(): void {
     const minutes = Math.floor(this.timeInSeconds / 60);
     const seconds = this.timeInSeconds % 60;
     this.displayTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     clearInterval(this.timer);
   }
 }

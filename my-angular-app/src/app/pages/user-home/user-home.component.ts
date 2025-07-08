@@ -1,35 +1,18 @@
-<<<<<<< Updated upstream
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 interface User {
   name: string;
   email: string;
   createdAt: string;
 }
-=======
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FooterComponent } from '../../components/footer/footer.component';
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-user-home',
   standalone: true,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  imports: [CommonModule], // Remove RouterLink if not used
-=======
-  imports: [CommonModule, RouterModule, FooterComponent],
->>>>>>> Stashed changes
-=======
-  imports: [CommonModule, RouterModule, FooterComponent],
->>>>>>> Stashed changes
+  imports: [CommonModule, RouterModule, FooterComponent], // Single imports array
   templateUrl: './user-home.component.html',
   styleUrls: ['./user-home.component.css']
 })
@@ -48,8 +31,15 @@ export class UserHomeComponent implements OnInit {
   }
 
   onStart(): void {
-    const meditationTime = (document.getElementById('meditation-time') as HTMLSelectElement).value;
-    this.router.navigate(['/session-start'], { queryParams: { time: meditationTime } });
+    const meditationTimeElement = document.getElementById('meditation-time') as HTMLSelectElement | null;
+    if (meditationTimeElement) {
+      const meditationTime = meditationTimeElement.value;
+      this.router.navigate(['/session-start'], { queryParams: { time: meditationTime } });
+    } else {
+      console.error('Meditation time select element not found');
+      // Optionally redirect or handle the error
+      this.router.navigate(['/error']); // Example fallback
+    }
   }
 
   onLogout(): void {

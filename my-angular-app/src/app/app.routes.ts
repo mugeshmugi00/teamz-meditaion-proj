@@ -6,20 +6,10 @@ import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 import { UserHomeComponent } from './pages/user-home/user-home.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { SessionStartComponent } from './pages/session-start/session-start.component';
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import { PoemComponent } from './pages/poem/poem.component';
-=======
 import { SupportComponent } from './pages/support/support.component';
 import { DocumentationComponent } from './pages/documentation/documentation.component';
 import { ExploreCoursesComponent } from './pages/explore-courses/explore-courses.component';
->>>>>>> Stashed changes
-=======
-import { SupportComponent } from './pages/support/support.component';
-import { DocumentationComponent } from './pages/documentation/documentation.component';
-import { ExploreCoursesComponent } from './pages/explore-courses/explore-courses.component';
->>>>>>> Stashed changes
-
 
 export const routes: Routes = [
   { path: '', component: IntroComponent },
@@ -32,13 +22,7 @@ export const routes: Routes = [
   { path: 'user-home', component: UserHomeComponent },
   { path: 'user-profile', component: UserProfileComponent },
   { path: 'session-start', component: SessionStartComponent },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   { path: 'app-poem', component: PoemComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
-=======
-=======
->>>>>>> Stashed changes
   { path: 'explore-courses', component: ExploreCoursesComponent },
   {
     path: 'claim-discount',
@@ -72,6 +56,5 @@ export const routes: Routes = [
     path: 'accessibility',
     loadComponent: () => import('./pages/accessibility/accessibility.component').then(m => m.AccessibilityComponent)
   },
-  { path: '**', redirectTo: '' } 
->>>>>>> Stashed changes
+  { path: '**', redirectTo: '' } // Wildcard route from stashed changes
 ];

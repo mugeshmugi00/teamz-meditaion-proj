@@ -1,31 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-=======
-import { RouterModule } from '@angular/router';
-import { FooterComponent } from '../../components/footer/footer.component';
->>>>>>> Stashed changes
-=======
-import { RouterModule } from '@angular/router';
-import { FooterComponent } from '../../components/footer/footer.component';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-login',
   standalone: true,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
-=======
-  imports: [CommonModule, RouterModule, FooterComponent],
->>>>>>> Stashed changes
-=======
-  imports: [CommonModule, RouterModule, FooterComponent],
->>>>>>> Stashed changes
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule], // Removed FooterComponent
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -44,8 +26,6 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
-  
-    
   }
 
   onSubmit(): void {
@@ -58,7 +38,7 @@ export class LoginComponent {
     this.isLoading = true;
     this.errorMessage = '';
     this.successMessage = '';
-    
+
     const { email, password } = this.loginForm.value;
 
     this.http.post('/api/login', { email, password })
@@ -67,7 +47,7 @@ export class LoginComponent {
           this.isLoading = false;
           this.successMessage = response.message || 'Login successful';
           this.errorMessage = '';
-          
+
           // Navigate based on user role
           setTimeout(() => {
             if (response.role === 'admin') {
@@ -82,11 +62,11 @@ export class LoginComponent {
         error: (error) => {
           this.isLoading = false;
           console.error('Login error:', error);
-          
+
           // Check if user doesn't exist based on your backend response
           const errorMsg = error.error?.error?.toLowerCase() || '';
           const statusCode = error.status;
-          
+
           if (statusCode === 400 && errorMsg.includes('user not found')) {
             this.errorMessage = 'User not found. Redirecting to registration...';
             setTimeout(() => {
